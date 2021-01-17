@@ -101,7 +101,7 @@ body{
     .grid{
         width: 110%;
         margin-left: 9%;
-        height: 350px;
+        /* height: 350px; */
         text-align: center;
     }
 }
