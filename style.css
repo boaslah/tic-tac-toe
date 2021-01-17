@@ -71,7 +71,7 @@ body{
     .grid{
         width: 110%;
         margin-left: 9%;
-        height: 410px;
+        /* height: 410px; */
     }
     .row2{
         width: 80%;
@@ -98,10 +98,10 @@ body{
 
 }
 @media only screen and (max-width: 360px){
-    .grid{
+    /* .grid{
         width: 110%;
         margin-left: 9%;
         height: 350px;
         text-align: center;
-    }
+    } */
 }
