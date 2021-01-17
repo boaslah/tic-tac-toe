@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet">
+    <title>Tic-Tac-Toe</title>
+</head>
+
+<body>
+
+    <div class="parent-div">
+
+        <div class="row1 score">
+            <div>
+                <span>Player 1:</span>
+                <span id="player1">0</span>
+            </div>
+            <div id="player">
+                <span>PLayer 2:</span>
+                <span id="player2">0</span>
+            </div>
+        </div>
+
+        <div class="row2">
+
+            <div class="grid">
+
+                <div class="box-row1">
+                    <div id="grid1" onclick="boxClick(grid1)" class="grid-box">1</div>
+                    <div id="grid2" onclick="boxClick(grid2)" class="grid-box">2</div>
+                    <div id="grid3" onclick="boxClick(grid3)" class="grid-box">3</div>
+                </div>
+
+                <div class="box-row2">
+                    <div id="grid4" onclick="boxClick(grid4)" class="grid-box">4</div>
+                    <div id="grid5" onclick="boxClick(grid5)" class="grid-box">5</div>
+                    <div id="grid6" onclick="boxClick(grid6)" class="grid-box">6</div>
+                </div>
+
+                <div class="box-row3">
+                    <div id="grid7" onclick="boxClick(grid7)" class="grid-box">7</div>
+                    <div id="grid8" onclick="boxClick(grid8)" class="grid-box">8</div>
+                    <div id="grid9" onclick="boxClick(grid9)" class="grid-box">9</div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="row3 button-div">
+            <input class="button" onclick="restart()" type="button" value="Restart">
+            <input class="button" type="button" value="Home">
+        </div>
+
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
