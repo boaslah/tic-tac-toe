@@ -85,7 +85,7 @@ body{
     .button-div{
         width: 50%;
         margin-left: 30%;
-        margin-top: 2%;
+        /* margin-top: 2%; */
     }
     .button{
         width: 40%;
