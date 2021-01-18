@@ -101,6 +101,10 @@ const checkResult = (player) => {
             // increment player 1 score
             player1_score = player1_score + 1;
         }
+        else if (blockboxes.length === 9) {
+            alert("Game is over");
+            restart()
+        }
     }
 
     // if it's player 2
@@ -117,7 +121,7 @@ const checkResult = (player) => {
             player2_score = player2_score + 1;
         }
         // check if all the boxes have been selected andd end the game 
-        if (blockboxes.length === 9) {
+        else if (blockboxes.length === 9) {
             alert("Game is over");
             restart()
         }
