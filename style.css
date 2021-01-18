@@ -80,7 +80,7 @@ body{
         margin-top: 10%;
     }
     #player{
-        /* margin-left: -3%; */
+        margin-left: -3%;
     }
     .button-div{
         width: 50%;
@@ -92,7 +92,7 @@ body{
         margin-left: 1%;
     }
     .score{
-        margin: 0% 0% 0% 20%;
+        margin: 0% 0% 0% 15%;
         width: 80%;
     }
 
