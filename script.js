@@ -40,6 +40,7 @@ const boxClick = (boxid) => {
             var num = boxid.id.split('d');
             // occupy this position of the bord with the player
             board[num[1] - 1] = player1;
+            boxid.innerHTML = "";
             boxid.innerHTML = player1;
             document.getElementById(boxid.id).style.color = "blue";
             // push that box to the block boxes array
@@ -67,6 +68,7 @@ const computerPlay = () => {
         else {
             var num = boxesValue[random].split('d');
             board[num[1] - 1] = player2;
+            document.getElementById(boxesValue[random]).innerHTML = "";
             document.getElementById(boxesValue[random]).innerHTML = player2;
             document.getElementById(boxesValue[random]).style.color = "blue";
             blockboxes.push(boxesValue[random]);
