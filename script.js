@@ -96,12 +96,13 @@ const checkResult = (player) => {
                 incrementScore();
                 // all the rset funtion
                 restart()
-            }, 500);
+            }, 200);
 
             // increment player 1 score
             player1_score = player1_score + 1;
         }
     }
+
     // if it's player 2
     else if (player === player2) {
         if (wining(board, player2)) {
@@ -121,38 +122,39 @@ const checkResult = (player) => {
             restart()
         }
     }
+}
 
-    // funtion to restart the game
-    const restart = () => {
-        for (i = 0; i < blockboxes.length; i++) {
-            var num = blockboxes[i].split('d');
-            document.getElementById(blockboxes[i]).innerHTML = num[1];
-            document.getElementById(blockboxes[i]).style.color = "rgb(173, 200, 230)";
-        }
-        blockboxes = [];
-        human_play = false;
-        player1 = "X";
-        player2 = "O";
-        board = [1, 2, 3, 4, 5, 6, 7, 8, 9];
-
+// funtion to restart the game
+const restart = () => {
+    for (i = 0; i < blockboxes.length; i++) {
+        var num = blockboxes[i].split('d');
+        document.getElementById(blockboxes[i]).innerHTML = num[1];
+        document.getElementById(blockboxes[i]).style.color = "rgb(173, 200, 230)";
     }
+    blockboxes = [];
+    human_play = false;
+    player1 = "X";
+    player2 = "O";
+    board = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
-    // function to check if a player won
-    const wining = (board, player) => {
-        if (
-            (board[0] === player && board[1] === player && board[2] === player) ||
-            (board[3] === player && board[4] === player && board[5] === player) ||
-            (board[6] === player && board[7] === player && board[8] === player) ||
-            (board[0] === player && board[4] === player && board[8] === player) ||
-            (board[2] === player && board[4] === player && board[6] === player) ||
-            (board[2] === player && board[5] === player && board[8] === player) ||
-            (board[1] === player && board[4] === player && board[7] === player) ||
-            (board[0] === player && board[3] === player && board[6] === player)
+}
 
-        ) {
-            return true;
-        }
-        else {
-            return false;
-        }
+// function to check if a player won
+const wining = (board, player) => {
+    if (
+        (board[0] === player && board[1] === player && board[2] === player) ||
+        (board[3] === player && board[4] === player && board[5] === player) ||
+        (board[6] === player && board[7] === player && board[8] === player) ||
+        (board[0] === player && board[4] === player && board[8] === player) ||
+        (board[2] === player && board[4] === player && board[6] === player) ||
+        (board[2] === player && board[5] === player && board[8] === player) ||
+        (board[1] === player && board[4] === player && board[7] === player) ||
+        (board[0] === player && board[3] === player && board[6] === player)
+
+    ) {
+        return true;
     }
+    else {
+        return false;
+    }
+}
